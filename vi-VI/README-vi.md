@@ -15,7 +15,8 @@ Danh sách các ngôn ngữ khác:
 * [Español](../es-ES/README-ES.md)
 * [Français](../fr-FR/README_fr-FR.md)
 * [日本語](../ja-JA/README-ja_JA.md)  
-* [한국어](../ko-KR/README-ko_KR.md) 
+* [한국어](../ko-KR/README-ko_KR.md)
+* [Nederlands](./nl-NL/README.md)
 * [Português Brasil](../pt-BR/README_pt_BR.md)  
 * [Русский](../ru-RU/README.md)
 * [Українська мова](../ua-UA/README-ua_UA.md)  
@@ -1047,7 +1048,7 @@ typeof sayHi();
 
 `sayHi` function trả về giá trị của một _hàm gọi ngay lập tức_ (immediately invoked function - IIFE). Function này trả về `0`, kiểu dữ liệu `"number"`.
 
-FYI: chỉ có 7 kiểu dữ liệu built-in: `null`, `undefined`, `boolean`, `number`, `string`, `object`, and `symbol`. `"function"` không phải là một kiểu, mà là objects, kiểu dữ liệu là `"object"`.
+FYI: chỉ có 7 kiểu dữ liệu built-in: `null`, `undefined`, `boolean`, `number`, `string`, `object`, `symbol`, and `bigint`. `"function"` không phải là một kiểu, mà là objects, kiểu dữ liệu là `"object"`.
 
 </p>
 </details>
@@ -4453,39 +4454,7 @@ Tuy nhiên trên thực tế đây chỉ là đóng băng _nông_ (_shallowly_) 
 
 ---
 
-###### 138. Cách nào sau đây có thể thay đổi object `person`?
-
-```javascript
-const person = {
-	name: "Lydia Hallie",
-	address: {
-		street: "100 Main St"
-	}
-};
-
-Object.freeze(person);
-```
-
-- A: `person.name = "Evan Bacon"`
-- B: `delete person.address`
-- C: `person.address.street = "101 Main St"`
-- D: `person.pet = { name: "Mara" }`
-
-<details><summary><b>Đáp án</b></summary>
-<p>
-
-#### Đáp án: C
-
-Phương thức `Object.freeze` sẽ _đóng băng_ object. Ta không thể thêm/sửa/xóa bất kì thuộc tính nào.
-
-Tuy nhiên trên thực tế đây chỉ là đóng băng _nông_ (_shallowly_) object, có nghĩa là nó chỉ đóng băng các thuộc tính _trực tiếp_ của object mà thôi. Nếu thuộc tính lại là một object khác, như `address` trong trường hợp này, thuộc tính bên trong của `address` sẽ không bị đóng băng, và ta vẫn có thể chỉnh sửa như bình thường.
-
-</p>
-</details>
-
----
-
-###### 139. Output là gì?
+###### 138. Output là gì?
 
 ```javascript
 const add = x => x + x;
@@ -4517,7 +4486,7 @@ Sau đó ta gọi hàm `myFunc(3)`, khi này `3` sẽ là giá trị của `num`
 
 ---
 
-###### 140. Output là gì?
+###### 139. Output là gì?
 
 ```javascript
 class Counter {
@@ -4555,7 +4524,7 @@ Với cú pháp ES2020, ta có thể thêm các thuộc tính private vào class
 
 ---
 
-###### 141. Câu lệnh còn thiếu là gì?
+###### 140. Câu lệnh còn thiếu là gì?
 
 ```javascript
 const teams = [
@@ -4600,7 +4569,7 @@ Nếu ta dùng `yield`, `return yield`, hay `return`, toàn bộ generator sẽ 
 
 ---
 
-###### 142. Output là gì?
+###### 141. Output là gì?
 
 ```javascript
 const person = {
@@ -4645,7 +4614,7 @@ Sau khi thêm `dancing` và `baking`, giá trị của `person.hobbies` là `["c
 
 ---
 
-###### 143. Output là gì?
+###### 142. Output là gì?
 
 ```javascript
 class Bird {
@@ -4681,7 +4650,7 @@ Chúng ta tạo ra biến `pet` là một instance của clas `Flamingo`. Khi ta
 
 ---
 
-###### 144. Câu lệnh nào sẽ bị lỗi?
+###### 143. Câu lệnh nào sẽ bị lỗi?
 
 ```javascript
 const emojis = ["🎄", "🎅🏼", "🎁", "⭐"];
@@ -4709,7 +4678,7 @@ Từ khóa `const` làm cho ta không thể _định nghĩa lại_ giá trị c�
 
 ---
 
-###### 145. Ta cần thêm gì vào object `person` để khi gọi `[...person]` sẽ cho kết quả là `["Lydia Hallie", 21]`?
+###### 144. Ta cần thêm gì vào object `person` để khi gọi `[...person]` sẽ cho kết quả là `["Lydia Hallie", 21]`?
 
 ```javascript
 const person = {
@@ -4736,4 +4705,3 @@ Mặc định ta không thể duyệt qua được object. Trừ phi nó đượ
 
 </p>
 </details>
-
